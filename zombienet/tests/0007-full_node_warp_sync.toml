@@ -49,10 +49,9 @@ cumulus_based = true
   command = "test-parachain"
   args = ["--reserved-only", "--reserved-nodes {{'charlie'|zombie('multiAddress')}}", "--relay-chain-rpc-url {{'alice'|zombie('wsUri')}}"]
 
-
-  # run cumulus george (a parachain full node) and wait for it to sync some blocks
+  # run cumulus one (a parachain full node) and wait for it to sync some blocks
   [[parachains.collators]]
-  name = "george"
+  name = "one"
   validator = false
   image = "{{COL_IMAGE}}"
   command = "test-parachain"
