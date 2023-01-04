@@ -1742,6 +1742,7 @@ dependencies = [
  "portpicker",
  "sc-cli",
  "sc-client-api",
+ "sc-service",
  "sp-blockchain",
  "sp-consensus",
  "sp-core",
