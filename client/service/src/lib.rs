@@ -339,10 +339,10 @@ where
 	let warp_sync_params = match parachain_config.network.sync_mode {
 		SyncMode::Warp => {
 			let warp_sync_params = if let Ok(target_block) =
-				cumulus_client_network::warp_sync_get::<Block>(
+				cumulus_client_network::warp_sync_get::<Block, RCInterface>(
 					para_id,
-					Arc::new(relay_chain_interface.clone()),
-					Arc::new(task_manager.spawn_handle()),
+					relay_chain_interface.clone(),
+					task_manager.spawn_handle(),
 				)
 				.await
 			{
