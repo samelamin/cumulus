@@ -62,7 +62,6 @@ add_to_genesis = false
   image = "{{COL_IMAGE}}"
   command = "test-parachain"
   args = ["-lsync=debug","--sync warp","--","--sync warp"]
-  db_snapshot = "https://github.com/samelamin/cumulus/blob/chain-snapshots/docker/snapshots/parachain-to-sync-59f3cf1381f613f05e70e12465f13255e62c8dab.tgz?raw=true"
 
   [[parachains.collators]]
   name = "two"
@@ -70,7 +69,6 @@ add_to_genesis = false
   image = "{{COL_IMAGE}}"
   command = "test-parachain"
   args = ["-lsync=debug","--sync warp","--relay-chain-rpc-urls {{'alice'|zombie('wsUri')}}"]
-  db_snapshot = "https://github.com/samelamin/cumulus/blob/chain-snapshots/docker/snapshots/parachain-to-sync-59f3cf1381f613f05e70e12465f13255e62c8dab.tgz?raw=true"
 
   [[parachains.collators]]
   name = "three"
@@ -78,4 +76,3 @@ add_to_genesis = false
   image = "{{COL_IMAGE}}"
   command = "test-parachain"
   args = ["-lsync=debug","--sync warp","--relay-chain-rpc-urls {{'dave'|zombie('wsUri')}}"]
-  db_snapshot = "https://github.com/samelamin/cumulus/blob/chain-snapshots/docker/snapshots/parachain-to-sync-59f3cf1381f613f05e70e12465f13255e62c8dab.tgz?raw=true"
